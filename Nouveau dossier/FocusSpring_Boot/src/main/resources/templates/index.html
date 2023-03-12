@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>PROJET-JAVA-SPRING - gestion RH</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      
+      .carte {
+     	margin: 0 auto;
+     	width: 100px;
+	  }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link th:href="@{/css/carousel.css}" rel="stylesheet">
+  </head>
+  <body>
+  
+  	<!-- HEADER -->
+	<div th:replace="fragments/header :: header"></div>
+
+	<main>
+
+		<!-- SLIDER -->
+			<div th:replace="fragments/slider :: slider"></div>
+			
+			
+			  <!-- Marketing messaging and featurettes
+			  ================================================== -->
+			  <!-- Wrap the rest of the page in another container to center all the content. -->
+			
+			  <div class="container marketing">
+			
+			    <!-- Three columns of text below the carousel -->
+			    <div class="row">
+			      <div class="col-lg-6 carte">
+			        <img src="/images/img9.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" aria-hidden="true" aria-label="Placeholder: 140x140" />
+			
+			        <h2>Departments</h2>
+			        <p><a th:href="@{/listDep}" class="btn btn-secondary">View Departments</a></p>
+			      </div><!-- /.col-lg-6 -->
+			      
+			      <div class="col-lg-6 carte">
+			        <img src="/images/img10.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" aria-hidden="true" aria-label="Placeholder: 140x140" />
+			
+			        <h2>Employs</h2>
+			        <p><a class="btn btn-secondary" th:href="@{/listEmploy}">View Employs</a></p>
+			      </div><!-- /.col-lg-6 -->
+			    </div><!-- /.row -->
+			
+			    <hr class="featurette-divider">
+			
+			    <!-- /END THE FEATURETTES -->
+			
+			  </div><!-- /.container -->
+		
+		
+		  <!-- FOOTER -->
+		  <div th:replace="fragments/footer ::footer"></div>
+		</main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+	
+  </body>
+</html>
